@@ -72,23 +72,23 @@ const App = () => {
     }
   }
 
-  // const handleUpdateExpense =async()=>{
-  //     if(updatedId){
-  //       try {
-  //         await connectionBackend.put(`/${updatedId}`,{
-  //           // label: updatedLabel===null?label:updatedLabel,
-  //           // amount:updatedAmount===null?amount:updatedAmount,
-  //           // date:updatedDate===null?date:updatedDate
-  //           label:updatedLabel,
-  //           amount:updatedAmount,
-  //           date:updatedDate
-  //         })
-  //         window.location.reload();
-  //       } catch (error) {
-  //         console.log("Error in updating function frontend",error)
-  //       }
-  //     }
-  // }
+  const handleUpdateExpense =async()=>{
+      if(updatedId){
+        try {
+          await connectionBackend.put(`/${updatedId}`,{
+            // label: updatedLabel===null?label:updatedLabel,
+            // amount:updatedAmount===null?amount:updatedAmount,
+            // date:updatedDate===null?date:updatedDate
+            label:updatedLabel,
+            amount:updatedAmount,
+            date:updatedDate
+          })
+          window.location.reload();
+        } catch (error) {
+          console.log("Error in updating function frontend",error)
+        }
+      }
+  }
 
   const handleUpdateExpense = async () => {
     if (updatedId) {
